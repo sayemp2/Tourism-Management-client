@@ -26,11 +26,7 @@ function App() {
     <>
 
       <h1>Vite + React</h1>
-      <form action="" onSubmit={handleSubmit}>
-        <input type="text" name="name" id="" />
-        <input type="email" name="email" id="" />
-        <input type="submit" value="save" />
-      </form>
+      
 
 
     </>
