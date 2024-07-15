@@ -1,42 +1,34 @@
-#root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
+/* Night Mode Styles */
+.night-mode {
+  background-color: #1d231f;
+  color: #ffffff;
+}
+
+/* Light Mode Styles */
+.light-mode {
+  background-color: #d1e2d7;
+  color: #333333;
+}
+
+/* Toggle Switch Styles */
+.toggle-checkbox {
+  display: none;
+}
+
+.toggle-label {
+  position: relative;
+  display: inline-block;
+  width: 100px; /* Adjust width as needed */
+  height: 30px; /* Adjust height as needed */
+  background-color: #ccc;
+  border-radius: 30px;
+  line-height: 30px;
   text-align: center;
+  cursor: pointer;
+  transition: background-color 0.3s;
 }
 
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
-}
-
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
-  }
-}
-
-.card {
-  padding: 2em;
-}
-
-.read-the-docs {
-  color: #888;
+.toggle-checkbox:checked + .toggle-label {
+  background-color: #63ab45; /* Adjust color for checked state */
+  color: #ffffff;
 }
