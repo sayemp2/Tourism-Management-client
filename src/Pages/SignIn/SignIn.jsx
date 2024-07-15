@@ -1,6 +1,6 @@
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import { FaGoogle, FaGithub } from "react-icons/fa";
-import { useContext } from "react";
+import { useContext, useState } from "react";
 import { AuthContext } from "../../Provider/AuthProvider";
 import { useForm } from "react-hook-form";
 import { toast } from "react-toastify";
@@ -10,11 +10,8 @@ const SignIn = () => {
     const location = useLocation();
     const navigate = useNavigate();
 
-    const {
-        register,
-        handleSubmit,
-        formState: { errors },
-    } = useForm();
+    const { register, handleSubmit, formState: { errors } } = useForm();
+    const [isChecked, setIsChecked] = useState(false);
 
     const onSubmit = (data) => {
         const { email, password } = data;
@@ -32,28 +29,16 @@ const SignIn = () => {
 
     const handleGoogleSignIn = () => {
         signInGoogle()
-            .then((result) => {
-                console.log(result.user);
-                toast("Successfully logged in with Google");
-                navigate(location.state ? location.state : '/');
-            })
-            .catch((error) => {
-                console.log(error.message);
-                toast(error.message);
-            });
+        .then(()=>{
+            toast("Login Success")
+        })
     };
 
     const handleGitHubSignIn = () => {
         signInGit()
-            .then((result) => {
-                console.log(result.user);
-                toast("Successfully logged in with GitHub");
-                navigate(location.state ? location.state : '/');
-            })
-            .catch((error) => {
-                console.log(error.message);
-                toast(error.message);
-            });
+        .then(()=>{
+            toast("Login Success")
+        })
     };
 
     return (
@@ -74,6 +59,10 @@ const SignIn = () => {
                         <label className="font-Montserrat text-2xl text-black font-bold" htmlFor="password">Password</label><br />
                         <input className="input w-full border-[#63ab45]" type="password" {...register("password")} name="password" id="password" /><br />
                     </div>
+                    <div className="flex items-center mt-4 mb-1">
+                        <input type="checkbox" checked={isChecked} onChange={() => setIsChecked(!isChecked)} />
+                        <label className="ml-2 font-Montserrat" htmlFor="checkbox">Accept Terms and Conditions</label>
+                    </div>
                     <input className="w-full font-Montserrat bg-[#63ab45] rounded-lg p-4 font-semibold hover:bg-black border-none text-white text-2xl mt-4" type="submit" value="Log in" />
                     <p className="font-Montserrat text-black font-semibold text-base">
                         Don't have an account? <Link className="text-[#63ab45]" to='/signup'>Register</Link>
@@ -89,7 +78,7 @@ const SignIn = () => {
                 </div>
             </div>
             <div className="p-4">
-                <img src="../../../public/travel.png" alt="Travel" />
+                <img src="/travel.png" alt="Travel" />
             </div>
         </div>
     );

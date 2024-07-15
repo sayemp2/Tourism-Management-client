@@ -4,16 +4,17 @@ import { useForm } from "react-hook-form";
 import { toast, ToastContainer } from "react-toastify";
 import { useContext } from "react";
 import { AuthContext } from "../../Provider/AuthProvider";
+import Swal from 'sweetalert2'
 import 'react-toastify/dist/ReactToastify.css';
 
 const SignUp = () => {
-    const { signUp, UpdateProfile } = useContext(AuthContext);
+    const { signUp, UpdateProfile, user, signInGoogle, signInGit } = useContext(AuthContext);
     const {
         register,
         handleSubmit,
         formState: { errors },
     } = useForm();
-
+    console.log(user);
     const onSubmit = (data) => {
         const { email, fullName, password, photoUrl } = data;
 
@@ -32,10 +33,28 @@ const SignUp = () => {
         }
 
         signUp(email, password)
-            .then(() => {
+            .then((result) => {
                 UpdateProfile(fullName, photoUrl)
                     .then(() => {
+                        console.log(result)
                         toast.success("Successfully registered");
+                        fetch('http://localhost:1000/users', {
+                            method: "POST",
+                            headers: {
+                                'Content-type': 'application/json'
+                            },
+                            body: JSON.stringify(data)
+                        })
+                            .then(res => res.json())
+                            .then(data => {
+                                console.log(data);
+                                Swal.fire({
+                                    title: 'Success',
+                                    text: 'Account Sign up Successfully',
+                                    icon: 'Success',
+                                  })
+                            })
+
                     })
                     .catch(error => {
                         console.error(error.message);
@@ -47,6 +66,20 @@ const SignUp = () => {
                 toast.error(error.message);
             });
     };
+    const handleGoogleSignIn = () => {
+        signInGoogle()
+            .then(() => {
+                toast("Login Success")
+            })
+    };
+
+    const handleGitHubSignIn = () => {
+        signInGit()
+            .then(() => {
+                toast("Login Success")
+            })
+    };
+
 
     return (
         <div>
@@ -119,10 +152,10 @@ const SignUp = () => {
                         </p>
                     </form>
                     <div className="flex flex-col space-y-3 mt-1">
-                        <button className="btn w-full font-Montserrat border-none text-xl text-white hover:bg-[#63ab45]">
+                        <button onClick={handleGoogleSignIn} className="btn w-full font-Montserrat border-none text-xl text-white hover:bg-[#63ab45]">
                             <FaGoogle className="mr-2" />Login with Google
                         </button>
-                        <button className="btn w-full font-Montserrat border-none text-xl text-white hover:bg-[#63ab45]">
+                        <button onClick={handleGitHubSignIn} className="btn w-full font-Montserrat border-none text-xl text-white hover:bg-[#63ab45]">
                             <FaGithub className="mr-2 text-2xl" />Login with Github
                         </button>
                     </div>
