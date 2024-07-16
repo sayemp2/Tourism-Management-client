@@ -23,7 +23,7 @@ function App() {
         setIsNightMode(!isNightMode);
     };
     const links = <>
-        <li><NavLink to='/'>Home</NavLink></li>
+        <li><NavLink to='/home'>Home</NavLink></li>
         <li><NavLink to='/'>All Tourist Spot</NavLink></li>
         <li><NavLink to='/'>Add Tourists Spot</NavLink></li>
         <li><NavLink to='/'>My List</NavLink></li>
