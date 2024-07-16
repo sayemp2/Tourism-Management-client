@@ -6,26 +6,28 @@ import SignUp from "../Pages/SignUp/SignUp";
 import Home from "../Pages/Home/Home";
 
 const router = createBrowserRouter([
-    {
-      path: "/",
-      element: <Root></Root>,
-      errorElement:<Error></Error>,
-      children:[
-        {
-          path:'/home',
-          element:<Home></Home>
-        },
+  {
+    path: "/",
+    element: <Root></Root>,
+    errorElement: <Error></Error>,
+    children: [
+      {
+        path: '/home',
+        element: <Home></Home>,
+        loader: () => fetch('https://tourism-management-server-brown.vercel.app/countries')
 
-        {
-          path:"/signin",
-          element:<SignIn></SignIn>
-        },
-        {
-          path:"/signup",
-          element:<SignUp></SignUp>
-        }
-      ]
-    },
-  ]);
+      },
 
-  export default router;
+      {
+        path: "/signin",
+        element: <SignIn></SignIn>
+      },
+      {
+        path: "/signup",
+        element: <SignUp></SignUp>
+      }
+    ]
+  },
+]);
+
+export default router;

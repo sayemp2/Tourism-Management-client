@@ -8,7 +8,7 @@ import { Autoplay, Pagination, Navigation } from 'swiper/modules';
 
 const Banner = () => {
     return (
-        <div className='bg-[#1d231f] h-screen'>
+        <div className='bg-[#1d231f] '>
             <Swiper
                 spaceBetween={30}
                 centeredSlides={true}
@@ -16,10 +16,8 @@ const Banner = () => {
                     delay: 2500,
                     disableOnInteraction: false,
                 }}
-                pagination={{
-                    clickable: true,
-                }}
-                navigation={true}
+              
+                
                 modules={[Autoplay, Pagination, Navigation]}
                 className="mySwiper"
             >
@@ -33,9 +31,9 @@ const Banner = () => {
                             <p className='md:text-2xl  font-Montserrat'>
                                 Embark on a Journey of Wonder: Explore Enchanting Destinations, Uncover Hidden Gems, and Create Unforgettable Memories Worldwide
                             </p>
-                            <button className='flex pl-10 text-white mt-6 text-3xl font-medium items-center p-3 rounded-full bg-[#63ab45]'>
+                            <button className='flex pl-10 p-2 text-white mt-6 text-3xl font-medium items-center  rounded-full bg-[#63ab45]'>
                                 Explore More
-                                <img className='w-20 pl-4' src="../../../public/play-button (2).png" alt="Play Button" />
+                                <img className='w-16 p-1 ' src="../../../public/play-button (2).png" alt="Play Button" />
                             </button>
                         </div>
                         <div className='lg:w-1/2 w-4/5'>
@@ -53,9 +51,9 @@ const Banner = () => {
                             <p className='md:text-2xl  font-Montserrat'>
                                 Embark on a Journey of Wonder: Explore Enchanting Destinations, Uncover Hidden Gems, and Create Unforgettable Memories Worldwide
                             </p>
-                            <button className='flex pl-10 text-white mt-6 text-3xl font-medium items-center p-3 rounded-full bg-[#63ab45]'>
+                            <button className='flex p-2 pl-10 text-white mt-6 text-3xl font-medium items-center  rounded-full bg-[#63ab45]'>
                                 Explore More
-                                <img className='w-20 pl-4' src="../../../public/play-button (2).png" alt="Play Button" />
+                                <img className='w-16 p-1 ' src="../../../public/play-button (2).png" alt="Play Button" />
                             </button>
                         </div>
                         <div className='lg:w-1/2 w-4/5'>
@@ -74,9 +72,9 @@ const Banner = () => {
                             <p className='md:text-2xl  font-Montserrat'>
                                 Embark on a Journey of Wonder: Explore Enchanting Destinations, Uncover Hidden Gems, and Create Unforgettable Memories Worldwide
                             </p>
-                            <button className='flex pl-10 text-white mt-6 text-3xl font-medium items-center p-3 rounded-full bg-[#63ab45]'>
+                            <button className='flex p-2 pl-10 text-white mt-6 text-3xl font-medium items-center  rounded-full bg-[#63ab45]'>
                                 Explore More
-                                <img className='w-20 pl-4' src="../../../public/play-button (2).png" alt="Play Button" />
+                                <img className='w-16 p-1 ' src="../../../public/play-button (2).png" alt="Play Button" />
                             </button>
                         </div>
                         <div className='lg:w-1/2 w-4/5'>
@@ -95,9 +93,9 @@ const Banner = () => {
                             <p className='md:text-2xl  font-Montserrat'>
                                 Embark on a Journey of Wonder: Explore Enchanting Destinations, Uncover Hidden Gems, and Create Unforgettable Memories Worldwide
                             </p>
-                            <button className='flex pl-10 text-white mt-6 text-3xl font-medium items-center p-3 rounded-full bg-[#63ab45]'>
+                            <button className='flex p-2 pl-10 text-white mt-6 text-3xl font-medium items-center  rounded-full bg-[#63ab45]'>
                                 Explore More
-                                <img className='w-20 pl-4' src="../../../public/play-button (2).png" alt="Play Button" />
+                                <img className='w-16 p-1 ' src="../../../public/play-button (2).png" alt="Play Button" />
                             </button>
                         </div>
                         <div className='lg:w-1/2 w-4/5'>
@@ -115,9 +113,9 @@ const Banner = () => {
                             <p className='md:text-2xl  font-Montserrat'>
                                 Embark on a Journey of Wonder: Explore Enchanting Destinations, Uncover Hidden Gems, and Create Unforgettable Memories Worldwide
                             </p>
-                            <button className='flex pl-10 text-white mt-6 text-3xl font-medium items-center p-3 rounded-full bg-[#63ab45]'>
+                            <button className='flex p-2 pl-10 text-white mt-6 text-3xl font-medium items-center  rounded-full bg-[#63ab45]'>
                                 Explore More
-                                <img className='w-20 pl-4' src="../../../public/play-button (2).png" alt="Play Button" />
+                                <img className='w-16 p-1 ' src="../../../public/play-button (2).png" alt="Play Button" />
                             </button>
                         </div>
                         <div className='lg:w-1/2 w-4/5'>
