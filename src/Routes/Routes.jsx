@@ -4,6 +4,8 @@ import Error from "../Pages/Error/Error";
 import SignIn from "../Pages/SignIn/SignIn";
 import SignUp from "../Pages/SignUp/SignUp";
 import Home from "../Pages/Home/Home";
+import AddTouristSpot from "../Pages/AddTouristSpot/AddTouristSpot";
+import AllTouristSpot from "../Pages/AllTouristSpot/AllTouristSpot";
 
 const router = createBrowserRouter([
   {
@@ -25,6 +27,15 @@ const router = createBrowserRouter([
       {
         path: "/signup",
         element: <SignUp></SignUp>
+      },
+      {
+        path: "/addtouristspot",
+        element: <AddTouristSpot></AddTouristSpot>
+      },
+      {
+        path: "/alltouristspot",
+        element:<AllTouristSpot></AllTouristSpot>,
+        loader:()=> fetch('https://tourism-management-server-brown.vercel.app/spotlist')
       }
     ]
   },

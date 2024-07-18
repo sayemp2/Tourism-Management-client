@@ -1,7 +1,14 @@
 const AllTouristSpot = () => {
+
+const 
     return (
         <div>
-            All tourist spot
+           <div>
+
+           </div>
+           <div>
+
+           </div>
         </div>
     );
 };
