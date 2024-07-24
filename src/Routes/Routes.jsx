@@ -17,7 +17,6 @@ const router = createBrowserRouter([
         path: '/home',
         element: <Home></Home>,
         loader: () => fetch('https://tourism-management-server-brown.vercel.app/countries')
-
       },
 
       {
@@ -35,7 +34,7 @@ const router = createBrowserRouter([
       {
         path: "/alltouristspot",
         element:<AllTouristSpot></AllTouristSpot>,
-        loader:()=> fetch('https://tourism-management-server-brown.vercel.app/spotlist')
+        loader:()=>fetch('https://tourism-management-server-brown.vercel.app/spotlist')
       }
     ]
   },

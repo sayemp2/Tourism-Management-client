@@ -1,14 +1,15 @@
+import { useLoaderData } from "react-router-dom";
+
 const AllTouristSpot = () => {
 
-const 
+    const tourisSpots = useLoaderData()
+
     return (
-        <div>
-           <div>
+        <div className="flex">
+            <div className="border w-1/4">
 
-           </div>
-           <div>
-
-           </div>
+            
+            </div>
         </div>
     );
 };

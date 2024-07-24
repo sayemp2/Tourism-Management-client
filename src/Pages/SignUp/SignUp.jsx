@@ -38,7 +38,7 @@ const SignUp = () => {
                     .then(() => {
                         console.log(result)
                         toast.success("Successfully registered");
-                        fetch('http://localhost:1000/users', {
+                        fetch('https://tourism-management-server-brown.vercel.app/users', {
                             method: "POST",
                             headers: {
                                 'Content-type': 'application/json'
