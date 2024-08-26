@@ -52,9 +52,6 @@ function App() {
                         </ul>
                     )}
                 </div>
-                {/* <Link to='/' className="btn btn-ghost text-3xl font-bold font-Montserrat">
-                    <img className='w-14' src="../../../public/tourism (1).png" alt="" />SemWilds
-                </Link> */}
             </div>
             <div className="navbar-center hidden lg:flex">
                 <ul className="menu-horizontal text-lg space-x-10 px-1 font-Montserrat font-semibold">
