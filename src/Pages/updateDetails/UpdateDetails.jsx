@@ -1,7 +1,7 @@
 const UpdateDetails = () => {
     return (
         <div>
-            
+            Update Details
         </div>
     );
 };
