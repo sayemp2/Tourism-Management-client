@@ -6,6 +6,8 @@ import SignUp from "../Pages/SignUp/SignUp";
 import Home from "../Pages/Home/Home";
 import AddTouristSpot from "../Pages/AddTouristSpot/AddTouristSpot";
 import AllTouristSpot from "../Pages/AllTouristSpot/AllTouristSpot";
+import MyList from "../Pages/MyList/MyList";
+import ViewDetails from "../Pages/viewDetails/ViewDetails";
 
 const router = createBrowserRouter([
   {
@@ -35,6 +37,15 @@ const router = createBrowserRouter([
         path: "/alltouristspot",
         element:<AllTouristSpot></AllTouristSpot>,
         loader:()=>fetch('https://tourism-management-server-brown.vercel.app/spotlist')
+      },
+      {
+        path:"/alltouristspot/:id",
+        element:<ViewDetails></ViewDetails>
+      }
+      ,
+      {
+        path:"/myList",
+        element:<MyList></MyList>
       }
     ]
   },

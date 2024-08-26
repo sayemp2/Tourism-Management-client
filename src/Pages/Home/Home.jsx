@@ -5,7 +5,7 @@ import Banner from '../../Components/Banner/Banner';
 const Home = () => {
     const countries = useLoaderData()
     return (
-        <div className='bg-[#1d231f] px-3'>
+        <div className='bg-[#1d231f30] px-3'>
             <Banner></Banner>
             <About countries={countries} ></About>
         </div>
