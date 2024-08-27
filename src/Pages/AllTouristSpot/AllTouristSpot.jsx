@@ -4,6 +4,7 @@ import SpotCard from "../../Components/SpotCard/SpotCard";
 const AllTouristSpot = () => {
 
     const touristSpots = useLoaderData()
+  
     
 
     return (

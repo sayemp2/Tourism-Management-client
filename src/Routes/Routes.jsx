@@ -8,6 +8,7 @@ import AddTouristSpot from "../Pages/AddTouristSpot/AddTouristSpot";
 import AllTouristSpot from "../Pages/AllTouristSpot/AllTouristSpot";
 import MyList from "../Pages/MyList/MyList";
 import ViewDetails from "../Pages/viewDetails/ViewDetails";
+import UpdateDetails from "../Pages/updateDetails/UpdateDetails";
 
 const router = createBrowserRouter([
   {
@@ -41,6 +42,10 @@ const router = createBrowserRouter([
       {
         path:"/alltouristspot/:id",
         element:<ViewDetails></ViewDetails>
+      },
+      {
+        pathe:'/updatedetails',
+        element:<UpdateDetails></UpdateDetails>
       }
       ,
       {

@@ -39,8 +39,7 @@ const AddTouristSpot = () => {
             if (!response.ok) {
                 throw new Error('Network response was not ok');
             }
-            const data = await response.json();
-            console.log(data);
+            // form.reset();  
         } catch (error) {
             console.error('Error:', error);
             setError('An error occurred while adding the tourist spot.');
@@ -93,6 +92,10 @@ const AddTouristSpot = () => {
                             <label className="font-Montserrat text-white text-xl font-semibold" htmlFor="visitors">Total Visitors</label><br />
                             <input className="input font-Montserrat text-xl w-full text-black bg-white" placeholder="Type Total Visitors" type="text" name="visitors" id="visitors" required />
                         </div>
+                    </div>
+                    <div>
+                        <label className="font-Montserrat text-white text-xl font-semibold" htmlFor="name">Email</label>
+                        <input className="input font-Montserrat text-xl w-full m text-black bg-white" placeholder="Type your Email" type="text" name="Email" id="email" required />
                     </div>
                     <div>
                         <label className="font-Montserrat text-white text-xl font-semibold" htmlFor="name">User Name</label>
