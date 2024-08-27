@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 
 const Footer = () => {
     return (
-        <footer className="bg-[#151414] relative">
+        <footer className="bg-[#151414] relative font-Montserrat">
             <div className="container mx-auto">
                 <div className="border-b border-[#373636] pt-5 pb-5">
                     <div className="flex flex-wrap">
@@ -43,7 +43,7 @@ const Footer = () => {
                                     <img src="../../../public/tourism (1).png" className="" alt="logo" />
                                 </div>
                                 <p className="text-[#7e7e7e] text-sm mb-4">
-                                    Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                                    We are the most fun travel and tours company, dedicated to providing exciting adventures, unforgettable.
                                 </p>
                                 <div>
                                     <span className="text-white text-lg font-bold mb-5 block">Follow us</span>
