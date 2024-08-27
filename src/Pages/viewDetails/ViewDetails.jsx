@@ -35,7 +35,7 @@ const ViewDetails = () => {
             confirmButtonText: "Yes, delete it!"
         }).then((result) => {
             if (result.isConfirmed) {
-                fetch(`http://localhost:1000/spotlist/${id}`, {
+                fetch(`https://tourism-management-server-brown.vercel.app/spotlist/${id}`, {
                     method: "DELETE"
                 })
                 .then(res => res.json())

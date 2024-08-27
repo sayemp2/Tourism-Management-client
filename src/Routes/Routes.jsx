@@ -46,6 +46,7 @@ const router = createBrowserRouter([
       {
         path:'/update/:id',
         element:<UpdateDetails></UpdateDetails>,
+        loader:({params})=> fetch(`https://tourism-management-server-brown.vercel.app/spotlist/${params.id}`)
       }
       ,
       {
