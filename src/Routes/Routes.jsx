@@ -1,6 +1,5 @@
 import { createBrowserRouter } from "react-router-dom";
 import Root from "../Layout/Root";
-import Error from "../Pages/Error/Error";
 import SignIn from "../Pages/SignIn/SignIn";
 import SignUp from "../Pages/SignUp/SignUp";
 import Home from "../Pages/Home/Home";
@@ -9,15 +8,16 @@ import AllTouristSpot from "../Pages/AllTouristSpot/AllTouristSpot";
 import MyList from "../Pages/MyList/MyList";
 import ViewDetails from "../Pages/viewDetails/ViewDetails";
 import UpdateDetails from "../Pages/updateDetails/UpdateDetails";
+import ErrorPage from "../Pages/errorPage/ErrorPage";
 
 const router = createBrowserRouter([
   {
     path: "/",
     element: <Root></Root>,
-    errorElement: <Error></Error>,
+    errorElement: <ErrorPage></ErrorPage>,
     children: [
       {
-        path: '/home',
+        path: '/',
         element: <Home></Home>,
         loader: () => fetch('https://tourism-management-server-brown.vercel.app/countries')
       },
@@ -52,9 +52,9 @@ const router = createBrowserRouter([
       {
         path:"/myList",
         element:<MyList></MyList>
-      }
+      },
     ]
-  },
+  }
 ]);
 
 export default router;

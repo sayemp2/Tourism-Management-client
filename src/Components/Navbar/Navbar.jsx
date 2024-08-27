@@ -32,7 +32,7 @@ function App() {
 
     const links = (
         <>
-            <li><NavLink to='/home' onClick={closeDropdown}>Home</NavLink></li>
+            <li><NavLink to='/' onClick={closeDropdown}>Home</NavLink></li>
             <li><NavLink to='/alltouristspot' onClick={closeDropdown}>All Tourist Spots</NavLink></li>
             <li><NavLink to='/addtouristspot' onClick={closeDropdown}>Add Tourist Spot</NavLink></li>
             <li><NavLink to='/myList' onClick={closeDropdown}>My List</NavLink></li>
