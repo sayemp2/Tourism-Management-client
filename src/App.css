@@ -1,3 +1,15 @@
+.night-mode {
+  background-color: #1d231f;
+  color: #ffffff;
+}
+
+
+
+.light-mode {
+  background-color: #d1e2d7;
+  color: #333333;
+}
+
 .toggle-checkbox {
   display: none;
 }

@@ -6,10 +6,11 @@ import Service from '../../Components/service/Service';
 import CountrySection from '../../Components/countrySection/CountrySection';
 
 
+
 const Home = () => {
     const countries = useLoaderData()
     return (
-        <div className='bg-[#1d231f30] px-3'>
+        <div className={` px-3`}>
             <Banner></Banner>
             <CountrySection countries={countries}></CountrySection>
             <About  ></About>

@@ -3,8 +3,8 @@ import '../../App.css';
 import { Link, NavLink } from 'react-router-dom';
 import { AuthContext } from '../../Provider/AuthProvider';
 
-function App() {
-    const [isNightMode, setIsNightMode] = useState(false);
+function App({isNightMode, setIsNightMode}) {
+    // const [isNightMode, setIsNightMode] = useState(false);
     const [isDropdownOpen, setIsDropdownOpen] = useState(false);
     const { user, logOutUser } = useContext(AuthContext);
 
@@ -65,20 +65,20 @@ function App() {
                 {
                     user ? (
                         <div className="dropdown dropdown-end">
-                            <label tabIndex={0} role="button" className="btn btn-ghost hover:bg-[#f58721] hover:{user.displayName} btn-circle avatar">
+                            <label tabIndex={0} role="button" className="btn btn-ghost hover:bg-[#33f521a6] hover:{user.displayName} btn-circle avatar">
                                 <div className="w-10 rounded-full">
                                     <img alt="User avatar" src={user?.photoURL || "https://i.ibb.co/MDg47sk/account-icon-vector-48295268.jpg"} />
                                 </div>
                             </label>
-                            <ul className="menu menu-sm dropdown-content mt-3 z-10 p-2 shadow bg-[#f5872133] rounded-box w-52">
+                            <ul className="menu menu-sm dropdown-content mt-3 z-10 p-2 shadow bg-[#33f52133] rounded-box w-48">
                                 <li>
-                                    <Link to='/profile' className="justify-between">
+                                    <Link to='/' className="justify-between font-Montserrat text-white">
                                         Profile
                                         <span className="badge">New</span>
                                     </Link>
                                 </li>
-                                <li>{user?.displayName || "Not found"}</li>
-                                <li><button onClick={handleLogOut}>Logout</button></li>
+                                <li className='font-Montserrat text-white pl-3'>{user?.displayName || "Not found"}</li>
+                                <li className='font-Montserrat text-white'><button onClick={handleLogOut}>Logout</button></li>
                             </ul>
                         </div>
                     ) : (
