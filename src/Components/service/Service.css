@@ -1,0 +1,54 @@
+.car-mask {
+  background-color: #63ab45;
+  -webkit-mask-image: url("../../../public/car.png");
+  mask-image: url("../../../public/car.png");
+  -webkit-mask-size: contain;
+  mask-size: contain;
+  -webkit-mask-repeat: no-repeat;
+  mask-repeat: no-repeat;
+}
+
+.document-mask {
+  background-color: #63ab45;
+  -webkit-mask-image: url("../../../public/document.png");
+  mask-image: url("../../../public/document.png");
+  -webkit-mask-size: contain;
+  mask-size: contain;
+  -webkit-mask-repeat: no-repeat;
+  mask-repeat: no-repeat;
+}
+.travel-mask {
+  background-color: #63ab45;
+  -webkit-mask-image: url("../../../public/travel1.png");
+  mask-image: url("../../../public/travel1.png");
+  -webkit-mask-size: contain;
+  mask-size: contain;
+  -webkit-mask-repeat: no-repeat;
+  mask-repeat: no-repeat;
+}
+
+.learn {
+  text-decoration: none;
+
+  position: relative;
+  color: #c8c9c7;
+}
+
+.learn:hover {
+  color: #ffffff;
+}
+
+.learn::before {
+  content: '';
+  position: absolute;
+  bottom: -1px;
+  left: 0;
+  width: 0%;
+  height: 3px;
+  background-color: #63ab45;
+  transition: all, 1s;
+}
+
+.learn:hover::before {
+  width: 40%;
+}

@@ -8,7 +8,8 @@ export default {
     extend: {
       fontFamily: {
         Montserrat: ["Montserrat", " sans-serif"],
-        // Add more custom font families as needed
+        Noto:["Noto Sans"]
+        
       },
       keyframes: {
         slideInLeft: {

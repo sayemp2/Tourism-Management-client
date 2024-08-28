@@ -18,8 +18,8 @@
 .toggle-label {
   position: relative;
   display: inline-block;
-  width: 100px; /* Adjust width as needed */
-  height: 30px; /* Adjust height as needed */
+  width: 100px;
+  height: 30px; 
   background-color: #ccc;
   border-radius: 30px;
   line-height: 30px;
@@ -29,6 +29,6 @@
 }
 
 .toggle-checkbox:checked + .toggle-label {
-  background-color: #63ab45; /* Adjust color for checked state */
+  background-color: #63ab45; 
   color: #ffffff;
 }

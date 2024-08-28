@@ -12,7 +12,6 @@ const AllTouristSpot = () => {
 
             <div className="grid gap-5 lg:grid-cols-3 md:grid-cols-2">
                 {
-                    // show here sorting data 
                     touristSpots.map(touristSpot => 
                     <SpotCard key={touristSpot._id} touristSpot={touristSpot}></SpotCard>)
                 }
