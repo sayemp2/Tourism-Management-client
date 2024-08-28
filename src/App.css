@@ -1,16 +1,3 @@
-/* Night Mode Styles */
-.night-mode {
-  background-color: #1d231f;
-  color: #ffffff;
-}
-
-/* Light Mode Styles */
-.light-mode {
-  background-color: #d1e2d7;
-  color: #333333;
-}
-
-/* Toggle Switch Styles */
 .toggle-checkbox {
   display: none;
 }
