@@ -1,0 +1,38 @@
+
+@keyframes backgroundSwipe {
+    0% {
+      background-image: url('../../../public/woman-walking-big-entrance-gate-bali-indonesia.jpg');
+    }
+    50% {
+      background-image: url('../../../public/backpacker-standing-sunrise-viewpoint-ja-bo-village-mae-hong-son-province-thailand.jpg');
+    }
+    100% {
+      background-image: url('../../../public/small-house-built-peaceful-green-hill-high-up-mountains.jpg');
+    }
+  }
+
+
+.custom-bg {
+    animation: backgroundSwipe 10s infinite; 
+    background-size: cover;
+    background-position: center;
+    width: 100%;
+    height: 100vh;
+    position: relative;
+  }
+  
+  .custom-bg::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 0;
+  }
+  
+  .custom-bg > * {
+    position: relative;
+    z-index: 1;
+  }

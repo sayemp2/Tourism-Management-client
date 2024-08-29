@@ -11,8 +11,8 @@ const CountrySection = ({ countries }) => {
         <div>
             <div className="mt-20 ">
                 <div className="mx-auto text-center mb-10">
-                    <h3 className="lg:text-2xl mb-6 font-bold text-[#63ab45] font-Montserrat">All Countries</h3>
-                    <h1 className="md:text-5xl mb-4 text-2xl font-bold text-white font-Montserrat">Vibrant Cultures, Exotic Cuisines, Tropical Paradise</h1>
+                    <h3 className="lg:text-2xl mb-6 font-bold text-[#63ab45] font-Montserrat">Destination lists</h3>
+                    <h1 className="md:text-5xl mb-4 text-2xl font-bold text-white font-Montserrat">Go Exotic Places</h1>
                     <p className="md:text-xl text-xs w-11/12 md:w-3/4 mx-auto font-Montserrat">Every country offers unique experiences: vibrant cultures, rich histories, stunning landscapes, exotic cuisines, diverse traditions, welcoming locals, modern cities, ancient wonders, and breathtaking natural beauty.</p>
                 </div>
 
