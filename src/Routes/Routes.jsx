@@ -9,6 +9,7 @@ import MyList from "../Pages/MyList/MyList";
 import ViewDetails from "../Pages/viewDetails/ViewDetails";
 import UpdateDetails from "../Pages/updateDetails/UpdateDetails";
 import ErrorPage from "../Pages/errorPage/ErrorPage";
+import PrivateRoute from "../Layout/PrivateRoute";
 
 const router = createBrowserRouter([
   {
@@ -32,26 +33,26 @@ const router = createBrowserRouter([
       },
       {
         path: "/addtouristspot",
-        element: <AddTouristSpot></AddTouristSpot>
+        element: <PrivateRoute> <AddTouristSpot></AddTouristSpot></PrivateRoute>
       },
       {
         path: "/alltouristspot",
-        element:<AllTouristSpot></AllTouristSpot>,
-        loader:()=>fetch('https://tourism-management-server-brown.vercel.app/spotlist')
+        element: <AllTouristSpot></AllTouristSpot>,
+        loader: () => fetch('https://tourism-management-server-brown.vercel.app/spotlist')
       },
       {
-        path:"/alltouristspot/:id",
-        element:<ViewDetails></ViewDetails>
+        path: "/alltouristspot/:id",
+        element: <ViewDetails></ViewDetails>
       },
       {
-        path:'/update/:id',
-        element:<UpdateDetails></UpdateDetails>,
-        loader:({params})=> fetch(`https://tourism-management-server-brown.vercel.app/spotlist/${params.id}`)
+        path: '/update/:id',
+        element: <UpdateDetails></UpdateDetails>,
+        loader: ({ params }) => fetch(`https://tourism-management-server-brown.vercel.app/spotlist/${params.id}`)
       }
       ,
       {
-        path:"/myList",
-        element:<MyList></MyList>
+        path: "/myList",
+        element: <PrivateRoute><MyList></MyList></PrivateRoute>
       },
     ]
   }
