@@ -19,10 +19,22 @@ const router = createBrowserRouter([
     children: [
       {
         path: '/',
-        element: <Home></Home>,
-        loader: () => fetch('https://tourism-management-server-brown.vercel.app/countries')
-      },
+        element: <Home />,
+        loader: async () => {
+          // Fetching data from both endpoints simultaneously
+          const [countriesResponse, spotlistResponse] = await Promise.all([
+            fetch('https://tourism-management-server-brown.vercel.app/countries'),
+            fetch('https://tourism-management-server-brown.vercel.app/spotlist'),
+          ]);
 
+
+          const countries = await countriesResponse.json();
+          const spotlist = await spotlistResponse.json();
+
+
+          return { countries, spotlist };
+        },
+      },
       {
         path: "/signin",
         element: <SignIn></SignIn>
@@ -39,10 +51,12 @@ const router = createBrowserRouter([
         path: "/alltouristspot",
         element: <AllTouristSpot></AllTouristSpot>,
         loader: () => fetch('https://tourism-management-server-brown.vercel.app/spotlist')
+
       },
       {
         path: "/alltouristspot/:id",
-        element: <ViewDetails></ViewDetails>
+        element: <ViewDetails></ViewDetails>,
+    
       },
       {
         path: '/update/:id',

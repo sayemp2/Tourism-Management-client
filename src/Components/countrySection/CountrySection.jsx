@@ -37,9 +37,9 @@ const CountrySection = ({ countries }) => {
                         countries.map(country =>
                             <SwiperSlide key={country._id}>
                                 <button className='relative '>
-                                    <img className='w-full rounded-3xl ' src={country.image} alt="Bangladesh" />
+                                    <img className='w-full rounded-3xl ' src={country.img} alt="Bangladesh" />
                                     <div className='absolute rounded-3xl bottom-0 left-0 md:text-3xl text-xl lg:text-6xl h-full font-Montserrat font-bold w-full flex items-center justify-center text-center bg-black bg-opacity-50 text-white p-2'>
-                                        {country.country_Name}
+                                        {country.country}
                                     </div>
                                 </button>
                             </SwiperSlide>)
