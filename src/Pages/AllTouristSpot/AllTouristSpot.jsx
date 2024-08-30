@@ -5,6 +5,7 @@ import Banner from "../../Components/Banner/Banner";
 import { useContext } from "react";
 import { AuthContext } from "../../Provider/AuthProvider";
 import Loader from "../loader/Loader";
+import BookWIthUs from "../../Components/bookwithUS/BookWIthUs";
 
 const AllTouristSpot = () => {
 
@@ -15,8 +16,10 @@ const AllTouristSpot = () => {
 
     return (
         <div className="">
-            <Banner></Banner>
-
+            <div className="mx-auto text-center mb-8">
+                <h3 className="lg:text-2xl mb-6 font-bold text-[#63ab45] font-Montserrat">All Tourist Spot</h3>
+                <h1 className="md:text-5xl mb-4 text-2xl font-bold text-white font-Montserrat">We Are Most Funning </h1>
+            </div>
             <div className="grid relative gap-5 lg:grid-cols-3 md:grid-cols-2">
                 <div className="absolute left-1/3 md:w-2/5">{loader && <Loader />}</div>
                 {

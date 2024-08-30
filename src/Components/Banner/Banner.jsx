@@ -35,9 +35,9 @@ const Banner = () => {
                     <p className='md:text-2xl text-xs text-center font-Montserrat'>
                         Embark on a Journey of Wonder: Explore Enchanting Destinations, Uncover Hidden Gems, and Create Unforgettable Memories Worldwide
                     </p>
-                    <button className='flex p-2 pl-10 mx-auto text-white mt-6 md:text-3xl text-xl font-medium items-center  rounded-full bg-[#63ab45]'>
+                    <button className='flex p-2 pl-10 p mx-auto text-white mt-6 md:text-3xl text-xl font-medium items-center  rounded-full bg-[#63ab45]'>
                         Explore More
-                        <img className='w-16  p-1 ' src="../../../public/play-button (2).png" alt="Play Button" />
+                        <img className='md:w-16 w-10 pl-2  ' src="../../../public/play-button (2).png" alt="Play Button" />
                     </button>
                 </div>
             </div>

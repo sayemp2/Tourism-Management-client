@@ -39,7 +39,7 @@ const Footer = () => {
                     <div className="flex flex-wrap">
                         <div className="w-full lg:w-1/3 mb-12 lg:mb-0">
                             <div>
-                                <div className="mb-8 md:w-1/4">
+                                <div className="mb-8 md:w-1/4 w-1/4">
                                     <img src="../../../public/tourism (1).png" className="" alt="logo" />
                                 </div>
                                 <p className="text-[#7e7e7e] text-sm mb-4">
