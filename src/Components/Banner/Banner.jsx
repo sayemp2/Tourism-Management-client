@@ -14,7 +14,7 @@ const Banner = () => {
 
     return (
         <div className='bg-[#1d231f30] '>
-            <div className="md:h-screen flex-col-reverse justify-center p-4 items-center custom-bg">
+            <div className="md:h-screen flex  justify-center p-4 items-center custom-bg">
                 <div className='lg:w-2/3  w-4/5 lg:pl-10 mt-5  '>
                     <h1 className='lg:text-7xl text-2xl md:text-5xl mb-5 mx-auto  text-center font-Montserrat text-white font-bold'>
                         Discover Your Next { }
