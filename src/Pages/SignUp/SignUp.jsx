@@ -5,10 +5,11 @@ import { toast, ToastContainer } from "react-toastify";
 import { useContext } from "react";
 import { AuthContext } from "../../Provider/AuthProvider";
 import Swal from 'sweetalert2'
-import 'react-toastify/dist/ReactToastify.css';
+import Loader from "../loader/Loader";
+
 
 const SignUp = () => {
-    const { signUp, UpdateProfile, user, signInGoogle, signInGit } = useContext(AuthContext);
+    const { signUp, UpdateProfile, user, signInGoogle, signInGit, loader, setLoader } = useContext(AuthContext);
     const {
         register,
         handleSubmit,
@@ -37,6 +38,7 @@ const SignUp = () => {
                 UpdateProfile(fullName, photoUrl)
                     .then(() => {
                         console.log(result)
+                        setLoader(false);
                         toast.success("Successfully registered");
                         fetch('https://tourism-management-server-brown.vercel.app/users', {
                             method: "POST",
@@ -52,7 +54,7 @@ const SignUp = () => {
                                     title: 'Success',
                                     text: 'Account Sign up Successfully',
                                     icon: 'Success',
-                                  })
+                                })
                             })
 
                     })
@@ -83,7 +85,8 @@ const SignUp = () => {
 
     return (
         <div>
-            <div className="flex md:flex-row items-center flex-col-reverse bg-[#d1e2d7] h-full">
+            <div className="flex md:flex-row relative items-center flex-col-reverse bg-[#d1e2d7] h-full">
+            <div className="absolute left-1/3 md:w-2/5">{loader&& <Loader />}</div>
                 <div className="pl-5">
                     <img src="../../../public/destination.png" alt="Destination" />
                 </div>
