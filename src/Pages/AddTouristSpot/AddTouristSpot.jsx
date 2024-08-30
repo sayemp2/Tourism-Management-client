@@ -1,10 +1,12 @@
 import { useContext, useState } from "react";
 import { AuthContext } from "../../Provider/AuthProvider";
 import About from "../../Components/About/About";
+import Loader from "../loader/Loader";
 
 const AddTouristSpot = () => {
     const { user } = useContext(AuthContext);
     const [error, setError] = useState(null);
+    const { loader, setLoader } = useContext(AuthContext);
 
     const addSpot = async (event) => {
 
@@ -42,6 +44,7 @@ const AddTouristSpot = () => {
             }
             // form.reset();  
         } catch (error) {
+            setLoader(false)
             console.error('Error:', error);
             setError('An error occurred while adding the tourist spot.');
         }
@@ -49,7 +52,8 @@ const AddTouristSpot = () => {
 
     return (
         <div>
-            <div className="bg-[#e9f2ff] flex lg:flex-row flex-col lg:items-center">
+            <div className="bg-[#e9f2ff] relative flex lg:flex-row flex-col lg:items-center">
+            <div className="absolute left-1/3 md:w-2/5">{loader&& <Loader />}</div>
                 <div className="lg:w-1/2 p-4 lg:pl-7 animate-slideInLeft">
                     <form onSubmit={addSpot} className="space-y-3 bg-teal-500 p-11 rounded-2xl">
                         {error && <p className="text-red-500">{error}</p>}
