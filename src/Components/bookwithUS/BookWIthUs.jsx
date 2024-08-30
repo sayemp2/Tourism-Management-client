@@ -12,7 +12,7 @@ const BookWIthUs = () => {
                 <p className="flex items-center text-xl text-white mb-4"><FaCheckCircle className="text-[#63ab45] mr-4 text-[25px]" />Support people in free text extreme need</p>
                 <p className="flex items-center text-xl text-white mb-8"><FaCheckCircle className="text-[#63ab45] mr-4 text-[25px]" />Largest global industrial business community</p>
 
-                <button className="bg-[#63ab45] px-6 rounded-lg transition-all duration-1000 font-semibold py-2 text-white hover:bg-black">BOOK  WITH  US</button>
+                <button className="bg-[#63ab45] px-10 rounded-lg transition-all duration-1000 font-semibold py-2 text-xl text-white hover:bg-black">BOOK  WITH  US</button>
             </div>
         </div>
     );

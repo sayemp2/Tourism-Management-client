@@ -37,7 +37,7 @@ const Banner = () => {
                     </p>
                     <button className='flex p-2 pl-10 mx-auto text-white mt-6 md:text-3xl text-xl font-medium items-center  rounded-full bg-[#63ab45]'>
                         Explore More
-                        <img className='md:w-16 p-1 ' src="../../../public/play-button (2).png" alt="Play Button" />
+                        <img className='w-16  p-1 ' src="../../../public/play-button (2).png" alt="Play Button" />
                     </button>
                 </div>
             </div>
