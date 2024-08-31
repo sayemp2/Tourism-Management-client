@@ -1,4 +1,5 @@
 import { useLoaderData } from "react-router-dom";
+import Swal from 'sweetalert2'
 
 const UpdateDetails = () => {
     const spotData = useLoaderData();
@@ -16,18 +17,23 @@ const UpdateDetails = () => {
         const time = form.time.value;
         const visitors = form.visitors.value;
         const updateSpotDetails = { image, spot_Name, country_Name, location, description, cost, season, time, visitors }
-        fetch(`https://tourism-management-server-brown.vercel.app/spotlist/${_id}`,{
-            method:'PUT',
-            headers:{
-                'content-type':'application/json'
+        fetch(`https://tourism-management-server-brown.vercel.app/spotlist/${_id}`, {
+            method: 'PUT',
+            headers: {
+                'content-type': 'application/json'
             },
             body: JSON.stringify(updateSpotDetails)
         })
-        .then(res=> res.json())
-        .then(data=>{
-            console.log(data);
-        })
-        
+            .then(res => res.json())
+            .then(data => {
+                console.log(data);
+                Swal.fire({
+                    title: 'Success',
+                    text: 'Account Sign up Successfully',
+                    icon: 'Success',
+                })
+            })
+
 
     }
 
