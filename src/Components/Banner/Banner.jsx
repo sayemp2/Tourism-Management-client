@@ -1,5 +1,7 @@
 import './Banner.css'
 import { Typewriter } from 'react-simple-typewriter'
+import { MdPlayCircle } from "react-icons/md";
+
 
 const Banner = () => {
 
@@ -35,9 +37,9 @@ const Banner = () => {
                     <p className='md:text-2xl text-xs text-center font-Montserrat'>
                         Embark on a Journey of Wonder: Explore Enchanting Destinations, Uncover Hidden Gems, and Create Unforgettable Memories Worldwide
                     </p>
-                    <button className='flex p-2 pl-10 p mx-auto text-white mt-6 md:text-3xl text-xl font-medium items-center  rounded-full bg-[#63ab45]'>
+                    <button className='flex p-1 pl-6 p mx-auto text-white mt-6 md:text-3xl text-xl font-medium items-center  rounded-full bg-[#63ab45]'>
                         Explore More
-                        <img className='md:w-16 w-10 pl-2  ' src="../../../public/play-button (2).png" alt="Play Button" />
+                        <MdPlayCircle className='md:text-7xl text-5xl pl-2  '/>
                     </button>
                 </div>
             </div>

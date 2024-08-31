@@ -44,7 +44,7 @@ function App({isNightMode, setIsNightMode}) {
             <div className="navbar-start">
                 <div className="dropdown">
                     <label tabIndex={0} role="button" className=" flex items-center text-4xl  font-bold font-Montserrat" onClick={toggleDropdown}>
-                    <img className='w-14' src="../../../public/tourism (1).png" alt="" /><span className='pl-4'>SemWilds</span>
+                    <img className='md:w-14 w-8' src="../../../public/tourism (1).png" alt="" /><span className='pl-4 text-xl'>SemWilds</span>
                     </label>
                     {isDropdownOpen && (
                         <ul className="menu menu-sm dropdown-content bg-base-100 lg:hidden rounded-box z-10 mt-3 w-52 p-2 shadow">
