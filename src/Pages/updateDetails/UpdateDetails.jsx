@@ -29,8 +29,8 @@ const UpdateDetails = () => {
                 console.log(data);
                 Swal.fire({
                     title: 'Success',
-                    text: 'Account Sign up Successfully',
-                    icon: 'Success',
+                    text: 'Details Updated Successfully',
+                    icon: 'success',
                 })
             })
 

@@ -53,7 +53,7 @@ const SignUp = () => {
                                 Swal.fire({
                                     title: 'Success',
                                     text: 'Account Sign up Successfully',
-                                    icon: 'Success',
+                                    icon: 'success',
                                 })
                             })
 

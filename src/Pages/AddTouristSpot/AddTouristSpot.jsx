@@ -2,6 +2,7 @@ import { useContext, useState } from "react";
 import { AuthContext } from "../../Provider/AuthProvider";
 import About from "../../Components/About/About";
 import Loader from "../loader/Loader";
+import Swal from 'sweetalert2'
 
 const AddTouristSpot = () => {
     const { user } = useContext(AuthContext);
@@ -38,11 +39,16 @@ const AddTouristSpot = () => {
                 },
                 body: JSON.stringify(spotData)
             });
-
             if (!response.ok) {
                 throw new Error('Network response was not ok');
             }
-            // form.reset();  
+            Swal.fire({
+                title: 'Success',
+                text: 'Added New Place Successfully',
+                icon: 'success',
+            })
+           
+            form.reset();  
         } catch (error) {
             setLoader(false)
             console.error('Error:', error);
