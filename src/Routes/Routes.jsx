@@ -55,7 +55,7 @@ const router = createBrowserRouter([
       },
       {
         path: "/alltouristspot/:id",
-        element: <ViewDetails></ViewDetails>,
+        element: <PrivateRoute><ViewDetails></ViewDetails></PrivateRoute>,
     
       },
       {
